@@ -1,0 +1,120 @@
+body{
+    margin:0;
+    background-color: white;
+    flex: 1;
+}
+
+/* for downscale the page */
+@media screen and(max-width: 600px) {
+    
+}
+
+/* *********************** Navigation bar or header style sheet ***********************************************/
+
+.navigation_bar{
+    margin-left: 50px;
+    margin-top: 40px;
+    margin-right: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container_navigation_bar_left{
+    width: 80%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container_navigation_bar_left  a img{
+    margin-right: 10px;
+    width: 70px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    color:black;
+    text-decoration: none;
+    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.title:hover{
+    text-decoration: none;
+    color:#e26310;
+}
+
+.container_navigation_bar_left form{
+    position: relative;
+    display: inline-block;
+}
+
+.container_navigation_bar_left form input{
+    font-size: 16px;
+    width: 500px;
+    height: 30px;
+    padding: 10px 57px 10px 22px;
+    background-color: #e1e1e1;
+    border: 0;
+    border-radius: 100px;
+    outline-color: #e26310;
+}
+
+.container_navigation_bar_left form button{
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.navigation_button{
+    text-decoration: none;
+    color:black;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.navigation_button:hover{
+    color:#e26310;
+    text-decoration: none;
+}
+
+.container_navigation_bar_right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+}
+
+.container_navigation_bar_right button{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: #e26310;
+    font-size: 30px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+.material-symbols-outlined:hover{
+    color: #FFA836;
+    font-size: 32px;
+}
+
+
+/* ************************************************************************************************************* */
+
