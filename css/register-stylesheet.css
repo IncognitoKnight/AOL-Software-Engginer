@@ -5,22 +5,265 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body{* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        background: white;
+    }
+
+    .container {
+        max-width: 400px;
+        width: 100%;
+        background: rgb(245, 245, 245);
+        padding: 25px 30px;
+        border-radius: 5px;
+    }
+
+    .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .container .title::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 30px;
+        background: linear-gradient(#f8d496, #ffa836);
+    }
+
+    .container form .user-details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    form .user-details .input-box {
+        margin: 20px 0 12px 0;
+        width: (100% - 25px);
+    }
+
+    .user-details .input-box .details {
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+
+    .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        padding-left: 15px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .user-details .input-box input:focus,
+    .user-details .input-box input:valid {
+        border-color: #ffa836
+    }
+
+    form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form .gender-details .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+
+    .gender-details .category label {
+        display: flex;
+        align-items: center;
+    }
+
+    .gender-details .category .dot {
+        height: 18px;
+        width: 18px;
+        background: #d9d9d9;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 5px solid transparent;
+    }
+
+    #dot-1:checked~.category .one,
+    #dot-2:checked~.category .two,
+    #dot-3:checked~.category .three {
+        border-color: #d9d9d9;
+        background: blue;
+    }
+
+    form input[type="radio"] {
+        display: none;
+    }
+
+    form .button {
+        height: 45px;
+        margin: 45px 0;
+    }
+
+    form .button input {
+        height: 100%;
+        width: 100%;
+        color: #ffff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 5px;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, #f8d496, #ffa836);
+    }
+
+    form .button input:hover {
+        background: linear-gradient(135deg, #f8d496, #ffa836);
+    }
+
+    @media(max-width: 584px) {
+        .container {
+            max-width: 100%;
+
+        }
+
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        form .gender-details .category {
+            width: 100%;
+        }
+
+        .container form .user-details {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+
+        .user-details::-webkit-scrollbar {
+            width: 0;
+        }
+    }
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #f8d496,#ffa836);
+    background: black;  
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/assets/andrew-s-ouo1hbizWwo-unsplash.jpg');
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
-.container{
-    max-width: 700px;
+.main_container{
+    display: flex;
+    max-width: 900px;
+    max-height: 600px;
     width : 100%;
-    background: white;
-    padding: 25px 30px;
+    background: whitesmoke;
     border-radius: 5px;
-    margin-left: 600px;
 }
+
+/* .container_left {
+    display: flex;
+    flex: 1;
+    border-top-left-radius: 5px;    
+    border-bottom-left-radius: 5px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.container_left img{
+    width: 160px;
+    height: 160px;
+} */
+
+/* .container_left img{
+    max-width: 160px;
+    max-height: 160px;
+} */
+
+/* .container_left .hello{
+    color:#ffffff;
+    display: flex;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    padding-top: 75px;
+}   
+
+.container_left .name{
+    color: white;
+    display: flex;
+    font-size: 25px;
+    font-weight: 700;
+    position: absolute;
+    top: 0;
+    padding-top: 190px;
+} */
+
+form .sign_in_button{
+    position: relative;
+    height: fit-content;
+    width:  200px;
+    border-radius: 20px;
+    background: linear-gradient(#f8d496, #ffa836);
+    top: 400px;
+}
+
+form .sign_in_button input{
+    height: 100%;
+    width: 100%;   
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    background: transparent;
+    padding: 5px 10px;
+}
+
+form .sign_in_button input:hover{
+    background: #d9d9d9;
+}
+
+/* .container_left .headline{
+    font-size: 12px;
+    position: relative;
+    top: 500px;
+    left : 10px;
+} */
+
+.container{
+    max-width: 600px;
+    width: 100%;
+    /* background: lightgray; */
+    padding: 25px 30px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 
 .container .title{
     font-size: 25px;
@@ -120,17 +363,16 @@ form .button input{
     font-weight: 500;
     border-radius: 5px;
     letter-spacing: 1px;
-    background: linear-gradient(135deg, #f8d496, #ffa836);
+    background: #ffa836;
 }
 
 form .button input:hover{
-    background: linear-gradient(135deg, #f8d496, #ffa836);
+    background: #ffa836;
 }
 
 @media(max-width: 584px){
     .container{
         max-width: 100%;
-
     }
     form .user-details .input-box{
         margin-bottom: 15px;
